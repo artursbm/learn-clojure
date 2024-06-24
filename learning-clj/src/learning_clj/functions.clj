@@ -34,3 +34,44 @@
 ; ;;    ------------  ----------------------
 ; (let  [name value]  (code that uses name))
 
+; functions exercises from https://clojure.org/guides/learn/functions 
+; 1) greet function
+(defn greet [] (println "Hello"))
+; (greet)
+
+; 2) greet using def
+(def greetfn (fn [] (println "Hello")))
+; (greetfn)
+; macro for anonymous function with direct call to it (surrounded with ())
+(#(println "Hello"))
+
+; 3) 
+(defn greeting ([] (println "Hello, World")) ([x] (println "Hello, " x)) ([x y] (println (str x ", " y))))
+(assert (= "Hello, World!" (greeting)))
+(assert (= "Hello, Clojure!" (greeting "Clojure")))
+(assert (= "Good morning, Clojure!" (greeting "Good morning" "Clojure")))
+
+; 4) 
+(defn do-nothing [x] x)
+(do-nothing "Hi")
+
+; 5) 
+(defn always-thing [& args] 100)
+
+; 6)
+(defn make-thingy [x] (fn [& args] x))
+(make-thingy 100)
+
+; 7) 
+(defn triplicate [f] (f) (f) (f))
+(triplicate (fn [] (println "Hi")))
+
+; 8) 
+(defn opposite [f]
+  (fn [& args] (not (apply f args))))
+(opposite (fn [] (eval false)))
+
+; 9)
+(defn triplicate2 [f & args]
+  (triplicate (fn [] (apply f args)))
+  (triplicate2 println [1 2 3]))
