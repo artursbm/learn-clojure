@@ -46,10 +46,10 @@
 (#(println "Hello"))
 
 ; 3) 
-(defn greeting ([] (println "Hello, World")) ([x] (println "Hello, " x)) ([x y] (println (str x ", " y))))
+(defn greeting ([] (str "Hello, World!")) ([x] (str "Hello, " x)) ([x y] (str x ", " y)))
 (assert (= "Hello, World!" (greeting)))
-(assert (= "Hello, Clojure!" (greeting "Clojure")))
-(assert (= "Good morning, Clojure!" (greeting "Good morning" "Clojure")))
+(assert (= "Hello, Clojure!" (greeting "Clojure!")))
+(assert (= "Good morning, Clojure!" (greeting "Good morning" "Clojure!")))
 
 ; 4) 
 (defn do-nothing [x] x)
