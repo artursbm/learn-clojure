@@ -1,6 +1,11 @@
 (ns learning-clj.core
-  (:gen-class))
+  (:gen-class)
+  (:require [cider.nrepl :refer (cider-nrepl-handler)]
+            [learning-clj.tutorial :as tutorial])
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [])
+; TODO check how to make the REPL start from the project main
+; [nrepl.server :as nrepl-server])
+
+  (defn -main
+    "I don't do a whole lot ... yet."
+    [] (tutorial/print-name))

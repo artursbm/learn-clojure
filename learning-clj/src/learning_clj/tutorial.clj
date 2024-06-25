@@ -18,12 +18,14 @@
 (defn fetch-name
   "gets the name from a file"
   []
-  (slurp "Users/artur.mello/Git/personal/clojure-code/learning-clj/resources/name.txt"))
+  (slurp "~/Git/personal/learn-clojure/learning-clj/resources/name.txt"))
 
 (defn print-name
   "fetches name from file and prints to output"
-  [name]
-  (println "Your name is" name))
+  [message]
+  (println message (fetch-name)))
+
+(print-name "Hello, your name is ")
 
 (defn testfn [test] (println (str "Hey, " test)))
 (testfn "Artur")
