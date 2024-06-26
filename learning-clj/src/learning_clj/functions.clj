@@ -75,3 +75,13 @@
 (defn triplicate2 [f & args]
   (triplicate (fn [] (apply f args)))
   (triplicate2 println [1 2 3]))
+
+; talking about multi-arity functions again
+(defn hey-multi-arity
+  "Given a String value for the 'name' parameter, return a String hello message for that name. The first arity accepts a single String name parameter, the second arity accepts String first and last name parameters."
+  ([name]
+   (str "Hello " name))
+  ([firstname lastname]
+   (hey-multi-arity (str firstname " " lastname))))
+;; (hey-multi-arity "World")
+;; (hey-multi-arity "World" "I'm Clojure, I'm weird!")
