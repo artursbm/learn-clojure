@@ -26,5 +26,9 @@
    :last-name "Mello"
    :account account})
 
-(println am-account)
-
+;; this will print the account ID of Artur's am-account
+;; the arrow symbol is a threaded operation, which means that
+;; the output of the first function call (:account am-account)
+;; is passed to the second function call as its first argument
+(println (-> (:account am-account)(:account-id))) ; prints "1234-0"
+(println (:account-id (:account am-account))) ; prints "1234-0"
