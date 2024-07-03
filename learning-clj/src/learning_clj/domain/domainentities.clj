@@ -1,4 +1,4 @@
-(ns learning-clj.domainentities)
+(ns learning-clj.domain.domainentities)
 
 ; currency
 (def usd {:divisor 100

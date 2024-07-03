@@ -1,2 +1,0 @@
-(ns learning-clj.domainoperations)
-

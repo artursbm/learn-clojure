@@ -1,4 +1,4 @@
-(ns learning-clj.collections)
+(ns learning-clj.tutorials.collections)
 
 (def Person {:name "Artur" :id 123 :role "IC5" :payroll 19000.0})
 

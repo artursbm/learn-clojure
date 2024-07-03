@@ -1,4 +1,4 @@
-(ns learning-clj.referencetypes)
+(ns learning-clj.tutorials.referencetypes)
 
 (def num-zero (atom 0))
 (def num-one (atom 1))

@@ -1,4 +1,4 @@
-(ns learning-clj.tutorial
+(ns learning-clj.tutorials.tutorial
   (:require clojure.string))
 
 (import 'java.time.LocalTime)

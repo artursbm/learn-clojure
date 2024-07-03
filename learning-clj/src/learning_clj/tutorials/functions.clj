@@ -1,4 +1,4 @@
-(ns learning-clj.functions 
+(ns learning-clj.tutorials.functions 
   (:require [clojure.string]))
 
 (defn zero-arity-func [] (println "0-param-arity function with no param"))
