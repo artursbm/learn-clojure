@@ -14,7 +14,7 @@
 ;; As is often the case, we haven't been using fully qualified keys for our Currency entities so far,
 ;; so we require them with :req-un and :opt-un. This tells clojure.spec that an unqualified key is also fine.
 ;; If we had been using fully qualified keys diligently, we'd have registered with :req and :opt.
-(s/def :finance/currency (s/keys :req-un [:currency/divisor
+(s/def ::currency (s/keys :req-un [:currency/divisor ;; ::currency === :finance/currency, the namespace can be omitted
                                           :currency/sign
                                           :currency/code]
                                  :opt-un [:currency/desc]))
@@ -28,7 +28,7 @@
    :ukg {:divisor (* 17 29) :code "UKG" :sign "ʛ"
          :desc "Galleons of the United Kingdom"}})
 
-(s/valid? :finance/currency (:usd currencies))
+(s/valid? ::currency (:usd currencies))
 (s/valid? :currency/divisor (:divisor (:usd currencies)))
 
 (def default-curr "makes default currency BRL" (:brl currencies))
