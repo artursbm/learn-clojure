@@ -1,0 +1,4 @@
+[[:create-table todo
+  [id "INTEGER PRIMARY KEY"]
+  [description "TEXT"]
+  [checked "INTEGER DEFAULT 0"]]]

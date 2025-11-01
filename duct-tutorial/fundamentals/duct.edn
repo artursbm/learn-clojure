@@ -1,0 +1,8 @@
+{:vars
+ {name {:arg name, :env NAME, :type :str, :default "World"
+        :doc "The name of the person to greet"}}
+ :system
+ {:duct.module/logging {}
+  :tutorial.print/hello {:logger #ig/ref :duct/logger
+                         :level  #ig/profile {:repl :report, :main :info}
+                         :name   #ig/var name}}}

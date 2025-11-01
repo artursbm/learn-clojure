@@ -1,0 +1,10 @@
+{:vars {jdbc-url {:default "jdbc:sqlite:todo.db"}}
+ :system
+ {:duct.module/logging {}
+  :duct.module/sql
+  {:migrations #duct/include "migrations.edn"}
+  :duct.module/cljs {:builds {:client todo.client}}
+  :duct.module/web
+  {:features #{:site :api}
+   :handler-opts {:db #ig/ref :duct.database/sql}
+   :routes #duct/include "routes.edn"}}}

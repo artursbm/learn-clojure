@@ -1,0 +1,7 @@
+{:deps {org.clojure/clojure {:mvn/version "1.12.3"}
+        org.duct-framework/main {:mvn/version "0.4.3"}
+        org.duct-framework/module.logging {:mvn/version "0.6.6"}}
+ :paths ["src", "resources"]
+ :aliases {:duct {:main-opts ["-m" "duct.main"]}
+           :test {:extra-paths ["test/unit" "test/integration"]
+                  :extra-deps {org.duct-framework/test {:mvn/version "0.1.0"}}}}}

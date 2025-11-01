@@ -1,0 +1,7 @@
+[["/todos"
+  {:get  :todo.routes/list-todos
+   :post {:parameters {:body {:description :string}}
+          :handler    :todo.routes/create-todo}}]
+ ["/todos/:id"
+  {:parameters {:path {:id :int}}
+   :delete :todo.routes/remove-todo}]]

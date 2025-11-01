@@ -1,0 +1,9 @@
+**/*.clj-kondo
+**/*.lsp
+**/*.calva
+**/*.cpcache
+**/*.shadow-cljs
+**/*logs
+**/*target
+**/*.db
+**/*.DS_Store

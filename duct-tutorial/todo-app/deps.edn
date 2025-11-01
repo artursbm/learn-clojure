@@ -1,0 +1,14 @@
+{:deps {org.clojure/clojure {:mvn/version "1.12.3"}
+        org.duct-framework/client.http {:mvn/version "0.1.0"}
+        org.duct-framework/main {:mvn/version "0.4.4"}
+        org.duct-framework/module.cljs {:mvn/version "0.5.2"}
+        org.duct-framework/module.logging {:mvn/version "0.6.6"}
+        org.duct-framework/module.web {:mvn/version "0.13.4"}
+        org.duct-framework/module.sql {:mvn/version "0.9.0"}
+        org.xerial/sqlite-jdbc {:mvn/version "3.50.3.0"}
+        com.github.seancorfield/next.jdbc {:mvn/version "1.3.1070"}
+        no.cjohansen/replicant {:mvn/version "2025.06.21"}}
+ :paths ["src", "resources"]
+ :aliases {:duct {:main-opts ["-m" "duct.main"]}
+           :test {:extra-paths ["test/unit" "test/integration"]
+                  :extra-deps {org.duct-framework/test {:mvn/version "0.1.0"}}}}}

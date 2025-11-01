@@ -1,0 +1,4 @@
+{
+    "calva.refreshNssBeforeFn": "integrant.repl/suspend",
+    "calva.refreshNssAfterFn": "integrant.repl/resume"
+}
